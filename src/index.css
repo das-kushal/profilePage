@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    /* background-color: black; */
+    /* overflow-x: scroll; */
+    /* background: linear-gradient(rgb(32, 32, 32),black); */
+}
+body {
+}
+::-webkit-scrollbar {
+    width: 0;
+    /* Adjust as needed */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    /* Set the track background color */
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    /* Set the thumb (scrollbar handle) color */
+}
