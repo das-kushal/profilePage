@@ -7,7 +7,7 @@ import skillSet from '../../data/skillset'
 
 // FIXME: do it in mobile version also this does not look good in the mobile one 
 
-const SetSkill = ({ name,x,y }) => {
+const SetSkill = ({ name,x,y,id }) => {
   return (
     <motion.div
       style={{
@@ -43,7 +43,18 @@ const SetSkill = ({ name,x,y }) => {
     >
       <Badge colorScheme='white' textDecoration={'none'} variant={'subtle'} fontSize={'xl'} _hover={{ transform: 'scale(1.4)',transition: '.3s all ease-in-out' }} >
 
-        {name}
+        <span
+          style={{
+            color: 'red',
+            fontSize: '1.2em',
+            display: 'flex',
+            backgroundColor: "#171923",
+            borderRadius: '50%',
+            width: "1.4em",
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >{id}</span> {name}
       </Badge>
     </motion.div>
   )
@@ -74,7 +85,7 @@ export default function Skills() {
 
         <Text fontSize={['4xl','6xl']} fontWeight={'light'} textAlign={'center'} color='red'>
 
-          Skills
+          Skills <span style={{ color: 'yellow' }}><i>({skillSet.length})</i></span>
         </Text>
         <Flex
           // bgGradient={'repeating-radial-gradient(rgba(30 ,39 ,40,.8) 2px,rgba(23,25,35,.1) 5px , rgba(23,25,35,.2) 100px)'}
@@ -95,7 +106,7 @@ export default function Skills() {
           {
             skillSet.map((skill,index) => {
               return (
-                <SetSkill name={skill.name} x={skill.x} y={skill.y} key={index} />
+                <SetSkill name={skill.name} x={skill.x} y={skill.y} key={index} id={skill.id} />
               )
             })
           }
@@ -125,7 +136,9 @@ export default function Skills() {
           initial={{ opacity: 0,x: 100 }}
           whileInView={{ x: 0,opacity: 1,transition: { duration: .2,delay: .3 } }}
         >
-          <Text fontSize={['4xl','6xl']} fontWeight={'light'} textAlign={'center'} color='red'>Skills</Text>
+          <Text fontSize={['4xl','6xl']} fontWeight={'light'} textAlign={'center'} color='red'>
+            Skills <span style={{ color: 'yellow' }}><i>({skillSet.length})</i></span>
+          </Text>
         </motion.div>
         <Flex h={'100vh'} w={'100vw'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'}>
 
@@ -137,7 +150,10 @@ export default function Skills() {
                   whileInView={{ x: 0,opacity: 1,transition: { duration: .2,delay: skill.id * .01 } }}
                   style={{ overflowY: 'scroll',scrollBehavior: 'smooth',}}
                 >
-                  <Badge colorScheme='whiteAlpha' textDecoration={'none'} variant={'subtle'} w={'90vw'} mb={1} p={1} shadow={'dark-lg'} textAlign={'center'} >{skill.name}</Badge>
+                  <Badge color='white' bg='transparent' textDecoration={'none'} variant={'subtle'} w={'90vw'} mb={1} p={1} shadow={'dark-lg'} textAlign={'left'} >
+                    <span style={{ color: 'red' }}>{index + 1}.</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    {skill.name}</Badge>
                 </motion.div>
               )
             })
