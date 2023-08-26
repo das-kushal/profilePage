@@ -2,7 +2,7 @@ import { Flex, Text, VStack, Avatar, Spacer, Divider, Icon, Box, IconButton, Ima
 
 import landingImg from '../assets/landing.svg'
 
-import '../../styles/landing.css'
+// import '../../styles/landing.css'
 
 import { AnimatePresence, motion } from 'framer-motion'
 import kushal from '../assets/kushaldas.jpg'
