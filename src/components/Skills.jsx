@@ -1,4 +1,4 @@
-import { Badge, Box, Button, Flex, Text } from '@chakra-ui/react'
+import { Badge,Box,Button,Flex,Text } from '@chakra-ui/react'
 import React from 'react'
 import { motion } from 'framer-motion'
 import skillSet from '../../data/skillset'
@@ -7,7 +7,7 @@ import skillSet from '../../data/skillset'
 
 // FIXME: do it in mobile version also this does not look good in the mobile one 
 
-const SetSkill = ({ name, x, y }) => {
+const SetSkill = ({ name,x,y }) => {
   return (
     <motion.div
       style={{
@@ -37,11 +37,11 @@ const SetSkill = ({ name, x, y }) => {
       //     duration: .5
       //   }
       // }}
-      initial={{ opacity: 0, x: 0, y: 0 }}
-      whileInView={{ opacity: 1, x, y, transition: { duration: .5, delay: .4 } }}
+      initial={{ opacity: 0,x: 0,y: 0 }}
+      whileInView={{ opacity: 1,x,y,transition: { duration: .5,delay: .4 } }}
 
     >
-      <Badge colorScheme='whiteAlpha' textDecoration={'none'} variant={'subtle'}  fontSize={'xl'} _hover={{ transform: 'scale(1.1)', transition: '.3s all ease-in-out' }} >
+      <Badge colorScheme='white' textDecoration={'none'} variant={'subtle'} fontSize={'xl'} _hover={{ transform: 'scale(1.4)',transition: '.3s all ease-in-out' }} >
 
         {name}
       </Badge>
@@ -62,7 +62,7 @@ export default function Skills() {
         flexDirection={'column'}
         // bg={'black'}
         bgGradient={'linear(to-t,black,gray.900)'}
-        display={['none', 'flex']}
+        display={['none','flex']}
       // overflow={'hidden'}
 
 
@@ -72,7 +72,7 @@ export default function Skills() {
 
 
 
-        <Text fontSize={['4xl', '6xl']} fontWeight={'light'} textAlign={'center'} color='red'>
+        <Text fontSize={['4xl','6xl']} fontWeight={'light'} textAlign={'center'} color='red'>
 
           Skills
         </Text>
@@ -87,13 +87,13 @@ export default function Skills() {
           position={'relative'}
           // rounded={'full'}
           borderRadius={'50%'}
-          // shadow={'dark-lg'}
-          // zIndex={-10}
+        // shadow={'dark-lg'}
+        // zIndex={-10}
         // ml={'5rem'}
         // mr={'5rem'}
         >
           {
-            skillSet.map((skill, index) => {
+            skillSet.map((skill,index) => {
               return (
                 <SetSkill name={skill.name} x={skill.x} y={skill.y} key={index} />
               )
@@ -109,39 +109,39 @@ export default function Skills() {
       <Flex
 
         // id="skills"
-        h={['100vh', 0]}
+        h={['100vh',0]}
         w={'100vw'}
         // justifyContent={'flex-start'}
         alignItems={'center'}
         flexDirection={'column'}
         bgGradient={'linear(to-t,black,gray.900)'}
-        display={['flex', 'none']}
+        display={['flex','none']}
         // border={'1px solid red'}
         pt={'2rem'}
 
       >
 
         <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ x: 0, opacity: 1, transition: { duration: .2, delay: .3 } }}
+          initial={{ opacity: 0,x: 100 }}
+          whileInView={{ x: 0,opacity: 1,transition: { duration: .2,delay: .3 } }}
         >
-          <Text fontSize={['4xl', '6xl']} fontWeight={'light'} textAlign={'center'} color='red'>Skills</Text>
+          <Text fontSize={['4xl','6xl']} fontWeight={'light'} textAlign={'center'} color='red'>Skills</Text>
         </motion.div>
-        <Flex   h={'100vh'} w={'100vw'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'}>
+        <Flex h={'100vh'} w={'100vw'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'}>
 
-        {
-          skillSet.map((skill, index) => {
-            return (
-              <motion.div key={index}
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ x: 0, opacity: 1, transition: { duration: .2, delay: skill.id * .01 } }}
-              style={{ overflowY: 'scroll', scrollBehavior: 'smooth',}}
-              >
-                <Badge colorScheme='whiteAlpha' textDecoration={'none'} variant={'subtle'}  w={'90vw'}  mb={1} p={1} shadow={'dark-lg'} textAlign={'center'} >{skill.name}</Badge>
-              </motion.div>
-            )
-          })
-        }
+          {
+            skillSet.map((skill,index) => {
+              return (
+                <motion.div key={index}
+                  initial={{ opacity: 0,x: 100 }}
+                  whileInView={{ x: 0,opacity: 1,transition: { duration: .2,delay: skill.id * .01 } }}
+                  style={{ overflowY: 'scroll',scrollBehavior: 'smooth',}}
+                >
+                  <Badge colorScheme='whiteAlpha' textDecoration={'none'} variant={'subtle'} w={'90vw'} mb={1} p={1} shadow={'dark-lg'} textAlign={'center'} >{skill.name}</Badge>
+                </motion.div>
+              )
+            })
+          }
         </Flex>
       </Flex>
     </>

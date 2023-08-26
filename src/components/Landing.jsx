@@ -1,10 +1,10 @@
-import { Flex, Text, VStack, Avatar, Spacer, Divider, Icon, Box, IconButton, Image, Button,Link } from '@chakra-ui/react'
+import { Flex,Text,VStack,Avatar,Spacer,Divider,Icon,Box,IconButton,Image,Button,Link } from '@chakra-ui/react'
 
 import landingImg from '../assets/landing.svg'
 
-// import '../../styles/landing.css'
+import '../../styles/Landing.css'
 
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence,motion } from 'framer-motion'
 import kushal from '../assets/kushaldas.jpg'
 import logo from '../../public/icons8-k-67.png'
 
@@ -15,7 +15,7 @@ import { HashLink } from 'react-router-hash-link'
 import { BrowserRouter } from 'react-router-dom'
 
 const variants = {
-    hidden: { opacity: 0, scale: 4.4 },
+    hidden: { opacity: 0,scale: 4.4 },
     visible: {
         opacity: 1,
         scale: 1,
@@ -39,7 +39,7 @@ const variants_desc = {
 };
 
 const variants_image = {
-    hidden: { opacity: 0, y: 100 },
+    hidden: { opacity: 0,y: 100 },
     visible: {
         opacity: 1,
         y: 0,
@@ -52,15 +52,15 @@ const variants_image = {
 };
 
 const arrowVariants = {
-    hidden: { opacity: 0, x: 100 },
+    hidden: { opacity: 0,x: 100 },
     visible: {
         opacity: 1,
         x: 0,
-        transition: { duration: 1, delay: 0.5 },
+        transition: { duration: 1,delay: 0.5 },
     },
     shake: {
-        y: [0, -5, 5, -5, 5, 0],
-        transition: { duration: 2, repeat: Infinity, repeatType: "loop" },
+        y: [0,-5,5,-5,5,0],
+        transition: { duration: 2,repeat: Infinity,repeatType: "loop" },
     },
 };
 
@@ -68,20 +68,20 @@ const arrowVariants = {
 
 export default function Landing() {
 
-    const resumeLink ='https://drive.google.com/file/d/1etF3XFAILozDI_JyP1CrDWRrD48Wsef9/view?usp=sharing'
+    const resumeLink = 'https://drive.google.com/file/d/1etF3XFAILozDI_JyP1CrDWRrD48Wsef9/view?usp=sharing'
 
     return (
         <BrowserRouter>
 
             <Flex
                 // border={'3px solid red'}
-                height={['95vh', '92vh']}
+                height={['95vh','92vh']}
                 width={'100vw'}
                 overflowX={'hidden'}
                 bgGradient="linear(to-b, gray.900,black)"
                 alignItems="center"
                 justifyContent={['center',"space-around"]}
-                flexDirection={['column', "row"]}
+                flexDirection={['column',"row"]}
                 color="white"
                 initial="hidden"
                 // animate="visible"
@@ -103,7 +103,7 @@ export default function Landing() {
                     <Box
                         height={'5em'}
 
-                        display={['none', 'block']}
+                        display={['none','block']}
 
                     />
                     <motion.div
@@ -121,7 +121,7 @@ export default function Landing() {
                     >
                         <Avatar
                             borderRadius={'full'}
-                            boxSize={['100px', "160px"]}
+                            boxSize={['100px',"160px"]}
                             name="Kushal Das"
                             src={kushal}
                             // src={logo}
@@ -152,7 +152,7 @@ export default function Landing() {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            gap:'2px'
+                            gap: '2px'
                         }}
 
 
@@ -165,7 +165,7 @@ export default function Landing() {
                             alt="Rotating logo"
                             style={{ width: '60px' }}
                             animate={{ rotate: 360 }} // Animation configuration
-                            transition={{ ease: 'linear', duration: 10, repeat: Infinity }} // Animation properties
+                            transition={{ ease: 'linear',duration: 10,repeat: Infinity }} // Animation properties
                         />
                         {/* <Image 
                         src={logo} 
@@ -173,7 +173,7 @@ export default function Landing() {
                         transform={'rotate(360deg)'}
                         // _hover={{transform:"rotate(360deg)",transition:'2s all ease-in-out',cursor:'pointer'}}
                         /> */}
-                        <Text textAlign={'center'} fontSize={['5xl', "7xl"]} fontWeight={'light'}>Kushal Das</Text>
+                        <Text textAlign={'center'} fontSize={['5xl',"7xl"]} fontWeight={'light'}>Kushal Das</Text>
                     </motion.div>
                     <motion.div
                         variants={variants_desc}
@@ -188,10 +188,10 @@ export default function Landing() {
 
                         }}
                     >
-                        <Text textAlign={'center'} fontSize={['2xl', "4xl"]} fontStyle={'italic'} color={'#c3c3c3'}>Final Year CSE Student at <span style={{ color: 'red' }}>Jadavpur University</span></Text>
+                        <Text textAlign={'center'} fontSize={['2xl',"4xl"]} fontStyle={'italic'} color={'#c3c3c3'}>Final Year CSE Student at <span style={{ color: 'red' }}>Jadavpur University</span></Text>
                     </motion.div>
                     <motion.div
-                    
+
                         variants={variants_desc}
                         initial='hidden'
                         // animate='visible'
@@ -203,23 +203,23 @@ export default function Landing() {
                             }
 
                         }}
-                    
+
                     >
-                        <Flex justifyContent={'center'} alignItems={'center'} gap={['2rem', '7rem']} mt={5}>
+                        <Flex justifyContent={'center'} alignItems={'center'} gap={['2rem','7rem']} mt={5}>
                             <Link href={resumeLink} isExternal>Resume <ExternalLinkIcon mx='2px' /></Link>
-                            <HashLink to='#contact' smooth><Button variant={'outline'} textColor={'gray.400'} _hover={{textColor:'gray.700',bgColor:'gray.100'}}>Contact Me</Button></HashLink>
-                            
-                            </Flex>
+                            <HashLink to='#contact' smooth><Button variant={'outline'} textColor={'gray.400'} _hover={{ textColor: 'gray.700',bgColor: 'gray.100' }}>Contact Me</Button></HashLink>
+
+                        </Flex>
                     </motion.div>
                 </Flex>
                 <motion.div
-                id='landing-image-surround'
+                    id='landing-image-surround'
                     initial="hidden"
                     // animate="visible"
                     whileInView={{
                         opacity: 1,
                         y: 0,
-                        transition: { duration: 1, delay: 0.5 },
+                        transition: { duration: 1,delay: 0.5 },
                     }}
                     variants={arrowVariants}
                     exit={{ opacity: 0 }}
@@ -230,17 +230,17 @@ export default function Landing() {
 
                 >
                     {/* <AnimatePresence> */}
-                     <motion.div
+                    <motion.div
                         id='landing-image'
                         initial='visible'
                         // animate='shake'
                         whileInView={{
-                            y: [0, -5, 5, -5, 5, 0],
-                            transition: { duration: 3, repeat: Infinity, repeatType: "loop" }
+                            y: [0,-5,5,-5,5,0],
+                            transition: { duration: 3,repeat: Infinity,repeatType: "loop" }
                         }}
                         variants={arrowVariants}
                         exit={{ opacity: 0 }}
-                        
+
 
 
                     >
@@ -258,10 +258,10 @@ export default function Landing() {
 
                         /> */}
 
-                        <Image src={landingImg} h={['40vh','60vh']}  w={['100vw','40vw']}/>
+                        <Image src={landingImg} h={['40vh','60vh']} w={['100vw','40vw']} />
                     </motion.div>
 
-                    
+
                 </motion.div>
 
 
