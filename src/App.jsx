@@ -12,7 +12,7 @@ import { VStack } from '@chakra-ui/react'
 
 export default function App() {
   return (
-    <VStack w={'100vw'} mx={'auto'} p={0} m={0} gap={0} overflowX={'hidden'} scrollBehavior={'smooth'} >
+    <VStack w={'100vw'} mx={'auto'} p={0} m={0} gap={0} overflowX={'hidden'} scrollBehavior={'smooth'} backgroundColor={'#282E34'} >
       <Header />
       <Landing />
       <About />

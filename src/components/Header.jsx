@@ -1,4 +1,4 @@
-import { Button, Flex, IconButton } from '@chakra-ui/react';
+import { Button,Flex,IconButton } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 // import React from 'react';
 // import { HashLink as Link } from 'react-router-hash-link';
@@ -10,7 +10,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 export default function Header() {
     const socialVariants = {
-        hidden: { opacity: 0, y: -20 },
+        hidden: { opacity: 0,y: -20 },
         visible: {
             opacity: 1,
             y: 0,
@@ -25,7 +25,7 @@ export default function Header() {
     };
 
     const navVariants = {
-        hidden: { opacity: 0, x: -20 },
+        hidden: { opacity: 0,x: -20 },
         visible: {
             opacity: 1,
             x: 0,
@@ -36,7 +36,7 @@ export default function Header() {
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, x: 60 },
+        hidden: { opacity: 0,x: 60 },
         visible: {
             opacity: 1,
             x: 0,
@@ -50,22 +50,22 @@ export default function Header() {
     return (
         <BrowserRouter>
             <Flex
-            id='header'
+                id='header'
                 justifyContent={'center'}
                 pos={'relative'}
                 pt={'2vh'}
                 alignItems={'flex-start'}
-                backgroundColor={'gray.900'}
+                // backgroundColor={'gray.900'}
                 height={'7vh'}
                 overflowX={'hidden'}
                 width={'100vw'}
-                shadow={'lg'}
-                // border='1px solid red'
-                // pt={3}
+                shadow={'md'}
+            // border='1px solid red'
+            // pt={3}
             // position={'static'}
             >
-                <Flex justifyContent={'space-evenly'} alignItems={'center'} gap={['2rem', '7rem']}>
-                    {socialLinks.map((socialLink, index) => (
+                <Flex justifyContent={'space-evenly'} alignItems={'center'} gap={['2rem','7rem']}>
+                    {socialLinks.map((socialLink,index) => (
                         <motion.a
                             key={index}
                             href={socialLink.href}

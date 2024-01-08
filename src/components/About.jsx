@@ -70,7 +70,9 @@ export default function About() {
   ];
 
   return (
-    <Flex id='about' flexDirection={['column','row']} justifyContent={'center'} alignItems={'center'} h={'100vh'} w='100vw' bgGradient="linear(to-b,black,gray.900)">
+    <Flex id='about' flexDirection={['column','row']} justifyContent={'center'} alignItems={'center'} h={'100vh'} w='100vw'
+    // bgGradient="linear(to-b,black,gray.900)"
+    >
 
       <Flex
         // bg="blue.500"

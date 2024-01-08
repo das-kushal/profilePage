@@ -1,4 +1,4 @@
-import { Badge,Box,Button,Flex,Text } from '@chakra-ui/react'
+import { Badge,Box,Button,Flex,Text,Grid,Card,CardBody,Image,Spacer } from '@chakra-ui/react'
 import React from 'react'
 import { motion } from 'framer-motion'
 import skillSet from '../../data/skillset'
@@ -7,56 +7,61 @@ import skillSet from '../../data/skillset'
 
 // FIXME: do it in mobile version also this does not look good in the mobile one 
 
-const SetSkill = ({ name,x,y,id }) => {
+const SetSkill = ({ name,imgUrl,id }) => {
   return (
     <motion.div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        padding: '.5rem',
-        // rounded: 'full',
-        // borderRadius: '10% 10% 10% 10% ',
-        // backgroundColor: 'black',
-        // color: 'white',
-        cursor: 'pointer',
-        fontWeight: 'bold',
-        // boxShadow:"0px 0px 10px rgba(255, 255, 255, 0.3)"
-        // boxShadow: '0.2em 0.2em 0.2em 0.2em rgba(255, 255, 255, .61),0.2em 0.2em .2em 0.2em rgba(255, 255, 255, 0.35) '
+      whileHover={{ color: 'red',cursor: 'pointer',transition: { duration: .5 } }}
+      whileTap={{ color: "red",cursor: 'pointer',transition: { duration: .5 } }}
+      initial={{ opacity: 0,y: -50 }}
+      // animate={{ opacity: 1,y: 0 }}
+      whileInView={{ x: 0,opacity: 1,transition: { duration: .2,delay: .3 } }}
+      transition={{ duration: 0.5 }}
+    // borderRadius="md"
+    // border="1px solid #E2E8F0"
+    // boxShadow="md"
+    // bg="white"
+    // p={6}
+    // flexDir={'column'}
 
-
-        // border:'1px solid red',
-      }}
-
-      // whileHover={{
-      //   scale: 1.2,
-      //   backgroundColor: 'black',
-      //   color: 'white',
-      //   transition: {
-      //     duration: .5
-      //   }
-      // }}
-      initial={{ opacity: 0,x: 0,y: 0 }}
-      whileInView={{ opacity: 1,x,y,transition: { duration: .5,delay: .4 } }}
-
+    // style={{ border: "1px solid #E2E8F0",textAlign: 'center',flex: 1,alignItems: 'center',justifyContent: 'center',padding: '2rem',borderRadius: '10px' }}
     >
-      <Badge colorScheme='white' textDecoration={'none'} variant={'subtle'} fontSize={'xl'} _hover={{ transform: 'scale(1.4)',transition: '.3s all ease-in-out' }} >
+      <Card
+        bg={'gray.900'}
+        color={'white'}
+        shadow={'dark-lg'}
+        // border={'1px solid #E2E8F0'}
+        width={'100%'}
+        height={'130px'}
+      >
+        <CardBody
+          flex={1}
+          justifyContent={'center'}
+          alignItems={'center'}
+        >
+          <Flex flex={1} h={'60px'} justifyContent={'center'} alignItems={'center'}>
 
-        <span
-          style={{
-            color: 'red',
-            fontSize: '1.2em',
-            display: 'flex',
-            backgroundColor: "#171923",
-            borderRadius: '50%',
-            width: "1.4em",
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >{id}</span> {name}
-      </Badge>
-    </motion.div>
+            <Image
+              src={imgUrl}
+              objectFit='fill'
+              // h={'200px'}
+              w={'60px'}
+              alt='...'
+              borderRadius='lg'
+            // border={'1px solid #E2E8F0'}
+            />
+          </Flex>
+          <Spacer h={2} />
+          <Text fontWeight={'bold'}
+            // border={'1px solid #E2E8F0'} 
+            textAlign={'center'}
+            _hover={{
+              color: 'red'
+            }}>{name}</Text>
+        </CardBody>
+      </Card>
+      {/* <Box mt={2}> 
+      </Box> */}
+    </motion.div >
   )
 }
 
@@ -72,7 +77,7 @@ export default function Skills() {
         alignItems={'center'}
         flexDirection={'column'}
         // bg={'black'}
-        bgGradient={'linear(to-t,black,gray.900)'}
+        // bgGradient={'linear(to-t,black,gray.900)'}
         display={['none','flex']}
       // overflow={'hidden'}
 
@@ -87,9 +92,9 @@ export default function Skills() {
 
           Skills <span style={{ color: 'yellow' }}><i>({skillSet.length})</i></span>
         </Text>
-        <Flex
+        {/* <Flex
           // bgGradient={'repeating-radial-gradient(rgba(30 ,39 ,40,.8) 2px,rgba(23,25,35,.1) 5px , rgba(23,25,35,.2) 100px)'}
-          bgGradient={'repeating-radial-gradient(rgba(255,0,0,.3) 2px,rgba(23,25,35,.1) 5px , rgba(23,25,35,.2) 100px)'}
+          // bgGradient={'repeating-radial-gradient(rgba(255,0,0,.3) 2px,rgba(23,25,35,.1) 5px , rgba(23,25,35,.2) 100px)'}
           h={'90vh'}
           w={'100%'}
           justifyContent={'center'}
@@ -102,22 +107,37 @@ export default function Skills() {
         // zIndex={-10}
         // ml={'5rem'}
         // mr={'5rem'}
+        > */}
+
+        <Grid
+          templateColumns="repeat(4,1fr)"
+          gap={5}
+          p={4}
+
+          mt={10}
+          mx={'auto'}
+
+
+          style={{ width: '90%',justifyContent: 'center',alignItems: 'center',flex: 1,}}
         >
           {
             skillSet.map((skill,index) => {
               return (
-                <SetSkill name={skill.name} x={skill.x} y={skill.y} key={index} id={skill.id} />
+                <SetSkill name={skill.name} imgUrl={skill.imageUrl} key={index} id={skill.id} />
+                // <Button key={index}>{skill.name}</Button>
               )
             })
           }
 
-        </Flex>
+        </Grid>
+
+        {/* </Flex> */}
       </Flex>
 
 
 
       {/* TODO: mobile version  */}
-      <Flex
+      <Grid
 
         // id="skills"
         h={['100vh',0]}
@@ -125,7 +145,7 @@ export default function Skills() {
         // justifyContent={'flex-start'}
         alignItems={'center'}
         flexDirection={'column'}
-        bgGradient={'linear(to-t,black,gray.900)'}
+        // bgGradient={'linear(to-t,black,gray.900)'}
         display={['flex','none']}
         // border={'1px solid red'}
         pt={'2rem'}
@@ -153,13 +173,15 @@ export default function Skills() {
                   <Badge color='white' bg='transparent' textDecoration={'none'} variant={'subtle'} w={'90vw'} mb={1} p={1} shadow={'dark-lg'} textAlign={'left'} >
                     <span style={{ color: 'red' }}>{index + 1}.</span>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    {skill.name}</Badge>
+                    {skill.name}
+                    <Image src={skill.imageUrl} height={'20px'} width={'20px'} float={'right'} />
+                  </Badge>
                 </motion.div>
               )
             })
           }
         </Flex>
-      </Flex>
+      </Grid>
     </>
 
 

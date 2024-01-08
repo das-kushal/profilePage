@@ -78,7 +78,7 @@ export default function Landing() {
                 height={['95vh','92vh']}
                 width={'100vw'}
                 overflowX={'hidden'}
-                bgGradient="linear(to-b, gray.900,black)"
+                // bgGradient="linear(to-b, gray.900,black)"
                 alignItems="center"
                 justifyContent={['center',"space-around"]}
                 flexDirection={['column',"row"]}
@@ -160,13 +160,13 @@ export default function Landing() {
 
 
                     >
-                        <motion.img
+                        {/* <motion.img
                             src={logo}
                             alt="Rotating logo"
                             style={{ width: '60px' }}
                             animate={{ rotate: 360 }} // Animation configuration
                             transition={{ ease: 'linear',duration: 10,repeat: Infinity }} // Animation properties
-                        />
+                        /> */}
                         {/* <Image 
                         src={logo} 
                         // size={['xs', "md"]} 

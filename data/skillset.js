@@ -2,105 +2,93 @@ const skillSet = [
     {
         id: 1,
         name: 'Python',
-        x: '10vw',
-        y: '-2vw',
+        imageUrl: '/logos/python-original.svg'
     },
     {
-        id:2,
+        id: 2,
         name: 'React',
-        x: '-10vw',
-        y: '-6vw',
+        imageUrl: '/logos/react-original.svg'
     },
     {
-        id:3,
-        name: 'Web',
-        x: '0vw',
-        y: '0vw',
+        id: 3,
+        name: 'React Native',
+        imageUrl: '/logos/react-original.svg'
     },
     {
-        id:4,
+        id: 4,
         name: 'C++',
-        x: '12vw',
-        y: '10vw',
+        imageUrl: '/logos/cplusplus-original.svg'
     },
     {
-        id:5,
+        id: 5,
         name: 'Java',
-        x: '12vw',
-        y: '-10.5vw',
+        imageUrl: 'logos/java-original.svg'
     },
     {
-        id:6,
+        id: 6,
         name: 'JavaScript',
-        x: '-10.5vw',
-        y: '-15.5vw',
+        imageUrl: '/logos/javascript-original.svg'
     },
     {
-        id:7,
+        id: 7,
         name: 'Express.JS',
-        x: '-10.5vw',
-        y: '15.3vw',
+        imageUrl: '/logos/express-original.svg'
     },
     {
-        id:8,
+        id: 8,
         name: 'Chakra UI',
-        x: '20vw',
-        y: '15.5vw',
+        imageUrl: '/logos/chakraui.png'
     },
     {
-        id:9,
+        id: 9,
         name: 'Flask',
-        x: '-20vw',
-        y: '-3vw',
+        imageUrl: '/logos/flask-original.svg'
     },
     {
-        id:10,
+        id: 10,
         name: 'HTML',
-        x: '28vw',
-        y: '5.5vw',
+        imageUrl: '/logos/html5-original.svg'
     },
     {
-        id:11,
+        id: 11,
         name: 'TypeScript',
-        x: '10.5vw',
-        y: '-20.5vw',
+        imageUrl: '/logos/typescript-original.svg'
     },
     {
-        id:12,
+        id: 12,
         name: 'MySQL',
-        x: '21.5vw',
-        y: '-15.5vw',
+        imageUrl: '/logos/mysql-original.svg'
     },
     {
-        id:13,
+        id: 13,
         name: 'MongoDB',
-        x: '-24.5vw',
-        y: '-15.5vw',
+        imageUrl: '/logos/mongodb-original.svg'
     },
     {
-        id:14,
+        id: 14,
         name: 'Spring Boot',
-        x: '-29.5vw',
-        y: '5.5vw',
+        imageUrl: '/logos/spring-boot-original.png'
     },
     {
-        id:15,
+        id: 15,
         name: 'Vitest',
-        x: '35.5vw',
-        y: '-4.5vw',
+        imageUrl: '/logos/vitest-original.png'
     },
     {
-        id:16,
+        id: 16,
         name: 'DSA',
-        x: '-31.5vw',
-        y: '-7.5vw',
+        imageUrl: '/logos/dsa.png'
     },
     {
-        id:17,
+        id: 17,
         name: 'OOP',
-        x: '36.5vw',
-        y: '8.5vw',
+        imageUrl: '/logos/oop.png'
     },
+    {
+        id: 18,
+        name: 'Redux',
+        imageUrl: '/logos/redux-original.svg'
+    }
 ]
 
 export default skillSet

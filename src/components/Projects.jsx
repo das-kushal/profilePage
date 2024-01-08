@@ -1,4 +1,4 @@
-import { Box, Flex, Text, VStack } from '@chakra-ui/react'
+import { Box,Flex,Text,VStack } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import MyCard from './MyCard'
 
@@ -17,19 +17,19 @@ export default function Projects() {
         // justifyContent={'center'}
         // alignItems={'center'}
         // bgGradient={'linear(to-t,gray.900,black )'}
-        bg={'black'}
+        // bg={'black'}
         flexDir={'column'}
       >
         <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ x: 0, opacity: 1, transition: { duration: .5, delay: 1 } }}
+          initial={{ opacity: 0,x: -100 }}
+          whileInView={{ x: 0,opacity: 1,transition: { duration: .5,delay: 1 } }}
           // viewport={{once:true}}
           // onViewportLeave={{ opacity: 0, x: -100 ,transition: { duration: .5,delay:.5 } }}
           width={'100vw'}
         >
 
 
-          <Text fontSize={['4xl', '6xl']} fontWeight={'light'} textAlign={'center'} color='red' mt={'2vw'}>
+          <Text fontSize={['4xl','6xl']} fontWeight={'light'} textAlign={'center'} color='red' mt={'2vw'}>
             Projects  </Text>
 
 
@@ -43,7 +43,7 @@ export default function Projects() {
           pt={[0,4]}
         >
           {
-            projectData.map((project, index) => {
+            projectData.map((project,index) => {
               return (
                 <MyCard
                   name={project.name}
