@@ -13,9 +13,9 @@ import {
 } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { useToast } from '@chakra-ui/react'
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm,ValidationError } from '@formspree/react';
 export default function ContactForm() {
-    const [state, handleSubmit, reset] = useForm("xqkvqkdo");
+    const [state,handleSubmit,reset] = useForm("xqkvqkdo");
     let toast = useToast()
     if (state.succeeded) {
         console.log(state)
@@ -32,7 +32,7 @@ export default function ContactForm() {
     return (
         <Flex
             h={'100%'}
-            w={['100%', '80%']}
+            w={['100%','80%']}
             justifyContent={'center'}
             alignItems={'center'}
             flexDirection={'flex-start'}
@@ -51,8 +51,8 @@ export default function ContactForm() {
                 }}
             >
                 <motion.div
-                    initial={{ opacity: 0, x: 0 }}
-                    whileInView={{ x: 0, opacity: 1, transition: { duration: .5, delay: .6 } }}
+                    initial={{ opacity: 0,x: 0 }}
+                    whileInView={{ x: 0,opacity: 1,transition: { duration: .5,delay: .6 } }}
                     style={{
 
                         display: 'flex',
@@ -70,15 +70,15 @@ export default function ContactForm() {
                         alignItems={'end'}
                         flexDirection={'column'}
                         color={'white'}
-                        pl={[3, 0]}
-                        pr={[3, 0]}
+                        pl={[3,0]}
+                        pr={[3,0]}
 
                     // border={'1px solid green'}
                     // m={3}
                     >
 
                         <FormControl  >
-                            <FormLabel>Enter name</FormLabel>
+                            <FormLabel color={'#FAD700'}>Enter name</FormLabel>
                             <Input id="name"
                                 type="text"
                                 name="name"
@@ -97,7 +97,7 @@ export default function ContactForm() {
                         />
 
                         <FormControl  >
-                            <FormLabel>Email address</FormLabel>
+                            <FormLabel color={'#FAD700'}>Email address</FormLabel>
                             <Input id="email"
                                 type="email"
                                 name="email"
@@ -117,10 +117,10 @@ export default function ContactForm() {
                         />
 
                         <FormControl>
-                            <FormLabel>Write Something</FormLabel>
+                            <FormLabel color={'#FAD700'}>Write Something</FormLabel>
                             <Textarea placeholder='Enter what you want to tell me' id="message"
                                 name="message"
-                                size={['sm', 'md']}
+                                size={['sm','md']}
                                 fontSize={'md'}
                                 focusBorderColor='red.500'
 
@@ -141,11 +141,11 @@ export default function ContactForm() {
                             disabled={state.submitting}
                             // variant={'solid'}
                             mt={4}
-                            w={['100%', '20%']}
+                            w={['100%','20%']}
                             // _hover={{ bg: 'red.500',color:'white', transition: '.3s all ease-in-out' }}
                             // align={'center'}
 
-                            variant={'outline'} textColor={'gray.400'} _hover={{ textColor: 'gray.700', bgColor: 'gray.100' }}
+                            variant={'outline'} textColor={'gray.400'} _hover={{ textColor: 'gray.700',bgColor: 'gray.100' }}
                         >
                             Submit
                         </Button>

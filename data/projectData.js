@@ -26,9 +26,7 @@ const projectData = [
         name: 'Survey on Persistent Data Structures',
         desc: `
 My 5 team members along with me did a mini project, a kind of research on persistent data structures like arrays, stacks and queues, linked lists.
-### We explored the pointer model under the guidance of our esteemed Professor Chandan Mazumdar
-And we also implemented different persistent data structures like arrays, stacks and queues, linked lists using the pointer model
-And we also used a directed acyclic graph to implement the persistent stack .
+### Under the guidance of our esteemed Professor Chandan Mazumdar we  implemented different persistent data structures like arrays, stacks and queues, linked lists using the pointer model and we used a directed acyclic graph to implement the persistent stack .
         `,
 
         githubLink: 'https://github.com/das-kushal/Persistent_Stack',
@@ -43,8 +41,7 @@ And we also used a directed acyclic graph to implement the persistent stack .
 
 > This is a chrome extension which helps one to change the font of editor of leetcode and coding ninjas and also the letter spacing
 
-### In this extension I have used html, css and javascript
-- I have given the permisions for activeTab and tabs and storage to identify the coding ninjas' tab and leetcode tab and only work in those
+### I have given the permisions for activeTab and tabs and storage to identify the coding ninjas' tab and leetcode tab and only work in those
 - In the rest of the tabs it detects and displays that the extension only works for leetcode and coding ninjas tabs
 - For persistent storage I have used localStorage
         `,

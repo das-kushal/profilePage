@@ -126,7 +126,7 @@ export default function Landing() {
                             src={kushal}
                             // src={logo}
                             shadow={'dark-lg'}
-                            // border={'2px solid red'}
+                            border={'2px solid #EC0000'}
                             _hover={{
 
                                 cursor: 'pointer',
@@ -173,7 +173,9 @@ export default function Landing() {
                         transform={'rotate(360deg)'}
                         // _hover={{transform:"rotate(360deg)",transition:'2s all ease-in-out',cursor:'pointer'}}
                         /> */}
-                        <Text textAlign={'center'} fontSize={['5xl',"7xl"]} fontWeight={'light'}>Kushal Das</Text>
+                        <Text textAlign={'center'} fontSize={['5xl',"7xl"]} fontWeight={'light'} color={'#FAD700'} _hover={{
+                            color: '#357EDD',transition: '.2s all ease-in-out',cursor: 'pointer'
+                        }}>Kushal <Text as="span" color='#FAD700' _hover={{ color: "#357EDD" }}>Das</Text></Text>
                     </motion.div>
                     <motion.div
                         variants={variants_desc}
@@ -188,7 +190,11 @@ export default function Landing() {
 
                         }}
                     >
-                        <Text textAlign={'center'} fontSize={['2xl',"4xl"]} fontStyle={'italic'} color={'#c3c3c3'}>Final Year CSE Student at <span style={{ color: 'red' }}>Jadavpur University</span></Text>
+                        <Text textAlign={'center'} fontSize={['2xl',"4xl"]} fontStyle={'normal'} color={'#c3c3c3'}>
+                            <Text as="span" color={'#EC0000'}>Web & App Developer , </Text>
+                            <br />
+                            Final Year CSE Student at <span style={{ color: 'red' }}>Jadavpur University</span>
+                        </Text>
                     </motion.div>
                     <motion.div
 

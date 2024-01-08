@@ -32,7 +32,7 @@ export default function About() {
       description:
         "Joined Jadavpur University after getting a rank of 142 in WBJEE . I am currently pursuing my Bachelors in Computer Science and Engineering. I am currently in my Final year.",
 
-      date: "December 2020 - June 2023",
+      date: "December 2020 - June 2024",
       icon: "school",
     },
     {
@@ -64,8 +64,8 @@ export default function About() {
   const aboutMe = [
     "Hello there, I am Kushal , a final year CSE student at Jadavpur University",
     "I am a full stack developer with a keen interest in Data Structures and Algorithms and has solved 1000+ problems on Leetcode alone.",
-    "I did my summer internship at Wells Fargo,Bangalore where I worked on React (for frontend) and Flask (for backend)",
-    'I am currently exploring cross platform app development using Flutter',
+    "I did my summer internship at Wells Fargo,Bangalore where I worked on React (for frontend) and Flask (for backend).",
+    'I am currently learning cross platform app development using React Native, also trying to learn Golang for its goroutines',
     "I like to code and listen music in my free time",
   ];
 

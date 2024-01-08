@@ -25,7 +25,7 @@ export default function Footer() {
 
       >
         <Text>
-          Created by Kushal with &hearts;
+          Created by <Text as={'span'} color={'#F10207'} fontWeight={'bold'} _hover={{ color: '#FAD700' }}>Kushal</Text> with &hearts;
         </Text>
         <Text>
 

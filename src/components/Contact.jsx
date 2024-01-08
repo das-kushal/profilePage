@@ -42,7 +42,7 @@ export default function Contact() {
         flexDirection={'column'}
         // border={'1px solid blue'}
         px={[0,10]}
-      // display={['none','flex']}
+        display={['none','flex']}
 
       >
         <motion.div

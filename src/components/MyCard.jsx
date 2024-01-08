@@ -47,9 +47,9 @@ export default function MyCard({ id,name,desc,githubLink,icon,iconLink,skills })
 
                     <Stack>
                         <CardBody>
-                            <Heading size='md'>{name}</Heading>
+                            <Heading size='lg' color={'#FAD700'}>{name}</Heading>
 
-                            <Text py='2' ml={3} wordBreak={'keep-all'} textAlign={'left'} fontSize={['sm','sm','sm']}>
+                            <Text py='4' ml={3} wordBreak={'keep-all'} textAlign={'left'} fontSize={['sm','sm','md']} fontFamily={''}>
                                 <ReactMarkdown>
                                     {desc}
                                 </ReactMarkdown>
@@ -68,7 +68,7 @@ export default function MyCard({ id,name,desc,githubLink,icon,iconLink,skills })
                                 {
                                     skills.map((skill,index) => {
                                         return (
-                                            <Button size={['sm','md']} key={index} variant={'ghost'} bg={'gray.800'} _hover={{ bg: 'gray.700',transition: '.3s all ease-in-out' }} color='whiteAlpha.700' shadow={'dark-lg'}>
+                                            <Button size={['sm','md']} key={index} variant={'ghost'} bg={'gray.800'} _hover={{ bg: 'gray.700',transition: '.3s all ease-in-out' }} color='#4FAA42' shadow={'dark-lg'}>
                                                 {skill}
                                             </Button>
                                         )
