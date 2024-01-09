@@ -1,6 +1,6 @@
-import { IconButton, Link } from "@chakra-ui/react"
+import { IconButton,Link } from "@chakra-ui/react"
 
-const SocialLinks = ({ text, icon, href ,external}) => {
+const SocialLinks = ({ text,icon,href,external }) => {
     return (
         <IconButton
             variant={'link'}
@@ -8,7 +8,7 @@ const SocialLinks = ({ text, icon, href ,external}) => {
             icon={icon}
             _hover={{ color: 'red' }}
             fontSize={'1.5rem'}
-            // pt={10}
+        // pt={10}
 
 
         >

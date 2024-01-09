@@ -83,6 +83,8 @@ export default function Header() {
                                 },
                             }}
 
+                            target='_blank'
+
 
                         >
                             <SocialLinks text={socialLink.text} icon={socialLink.icon} external={true} />
