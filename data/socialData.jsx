@@ -1,5 +1,5 @@
 import { ImLinkedin2 } from 'react-icons/im'
-import { SiLeetcode, SiGithub, SiGeeksforgeeks } from 'react-icons/si'
+import { SiLeetcode,SiGithub,SiGeeksforgeeks } from 'react-icons/si'
 const socialLinks = [
     {
         text: 'Linkedin',
@@ -9,7 +9,7 @@ const socialLinks = [
     {
         text: 'LeetCode',
         icon: <SiLeetcode />,
-        href: 'https://leetcode.com/kushaldas30102002/'
+        href: 'https://leetcode.com/kd-83/'
     },
     {
         text: 'Github',
