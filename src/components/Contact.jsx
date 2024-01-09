@@ -30,9 +30,9 @@ export default function Contact() {
       alignItems={'center'}
       // gap={2}  
       flexDir={['column','row']}
-      // mt={[0,'-25vh']}
+    // mt={[0,'-25vh']}
 
-      border={'1px solid red'}
+    // border={'1px solid red'}
 
     >
       {/* TODO: box 2 side of it in large screen is the pic */}
