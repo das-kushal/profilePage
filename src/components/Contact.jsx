@@ -23,14 +23,16 @@ export default function Contact() {
   return (
     <Flex
       id='contact'
-      h={'100vh'}
+      h={'60vh'}
       w={'100vw'}
       // bgGradient={'linear(to-b,black,gray.900)'}
       justifyContent={'center'}
       alignItems={'center'}
-      gap={2}
+      // gap={2}  
       flexDir={['column','row']}
-      mt={[0,'-25vh']}
+      // mt={[0,'-25vh']}
+
+      border={'1px solid red'}
 
     >
       {/* TODO: box 2 side of it in large screen is the pic */}
