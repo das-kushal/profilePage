@@ -19,6 +19,7 @@ export default function Projects() {
         // bgGradient={'linear(to-t,gray.900,black )'}
         // bg={'black'}
         flexDir={'column'}
+      // mt={-6}
       >
         <motion.div
           initial={{ opacity: 0,x: -100 }}

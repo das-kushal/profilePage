@@ -71,7 +71,7 @@ export default function Skills() {
       {/* TODO: laptop version and pc version */}
       <Flex
         id="skills"
-        h={'100vh'}
+        // h={'100vh'}
         w={'100vw'}
         // justifyContent={'flex-start'}
         alignItems={'center'}
@@ -79,7 +79,7 @@ export default function Skills() {
         // bg={'black'}
         // bgGradient={'linear(to-t,black,gray.900)'}
         display={['none','flex']}
-      // overflow={'hidden'}
+      // overflow={'scroll'}
 
 
       // bgGradient="linear(to-b,black 85%, white)"
@@ -114,8 +114,9 @@ export default function Skills() {
           gap={5}
           p={4}
 
-          mt={10}
+          mt={12}
           mx={'auto'}
+          // mb={10}
 
 
           style={{ width: '90%',justifyContent: 'center',alignItems: 'center',flex: 1,}}

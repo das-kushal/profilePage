@@ -23,7 +23,7 @@ export default function Contact() {
   return (
     <Flex
       id='contact'
-      h={'60vh'}
+      h={'65vh'}
       w={'100vw'}
       // bgGradient={'linear(to-b,black,gray.900)'}
       justifyContent={'center'}

@@ -99,7 +99,10 @@ export default function Landing() {
             // border={'1px solid blue'}
             // zIndex={10}
             >
-                <Flex justifyContent={'center'} alignItems={'center'} flexDir={'column'} height={'100%'}>
+                <Flex justifyContent={'center'} alignItems={'center'} flexDir={'column'} height={'100%'}
+                    // border={'1px solid red'}
+                    w={['100vw','50vw']}
+                >
                     <Box
                         height={'5em'}
 
@@ -218,6 +221,7 @@ export default function Landing() {
                         </Flex>
                     </motion.div>
                 </Flex>
+
                 <motion.div
                     id='landing-image-surround'
                     initial="hidden"
@@ -230,6 +234,11 @@ export default function Landing() {
                     variants={arrowVariants}
                     exit={{ opacity: 0 }}
                     onViewportLeave={{ opacity: 0 }}
+
+                    style={{
+                        // border: '1px solid blue',
+                        width: '50vw',
+                    }}
 
 
 
