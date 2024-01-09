@@ -23,21 +23,21 @@ export default function App() {
         {/* <Suspense fallback={<Skeleton height={'20px'} />}> */}
         <Landing />
         {/* </Suspense> */}
-        <Divider />
+        {/* <Divider /> */}
         <Suspense fallback={<Skeleton height={'20px'} />}>
           <About />
         </Suspense>
         <MobileEducation />
         {/* <br /> */}
-        <Divider />
+        {/* <Divider /> */}
         <Suspense fallback={<Skeleton height={'20px'} />}>
           <Skills />
         </Suspense>
-        <Divider />
+        {/* <Divider /> */}
         <Suspense fallback={<Skeleton height={'20px'} />}>
           <Projects />
         </Suspense >
-        <Divider />
+        {/* <Divider /> */}
         <Suspense fallback={<Skeleton height={'20px'} />}>
 
           <Contact />
