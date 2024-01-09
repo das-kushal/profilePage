@@ -23,8 +23,8 @@ export default function Projects() {
       >
         <motion.div
           initial={{ opacity: 0,x: -100 }}
-          whileInView={{ x: 0,opacity: 1,transition: { duration: .5,delay: 1 } }}
-          // viewport={{once:true}}
+          whileInView={{ x: 0,opacity: 1,transition: { duration: .5,delay: 0 } }}
+          viewport={{ once: true }}
           // onViewportLeave={{ opacity: 0, x: -100 ,transition: { duration: .5,delay:.5 } }}
           width={'100vw'}
         >

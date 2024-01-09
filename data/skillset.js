@@ -88,6 +88,16 @@ const skillSet = [
         id: 18,
         name: 'Redux',
         imageUrl: '/logos/redux-original.svg'
+    },
+    {
+        id: 19,
+        name: 'CSS',
+        imageUrl: '/logos/css3-original.svg'
+    },
+    {
+        id: 20,
+        name: 'TailwindCSS',
+        imageUrl: '/logos/Tailwind_CSS_Logo.svg.png'
     }
 ]
 

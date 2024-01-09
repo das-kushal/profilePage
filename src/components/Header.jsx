@@ -16,7 +16,7 @@ export default function Header() {
             y: 0,
             transition: {
                 // delay: 0.5,
-                duration: 1,
+                duration: .5,
                 // staggerChildren: 0.2,
             },
         },
@@ -78,10 +78,12 @@ export default function Header() {
                                 y: 0,
                                 transition: {
                                     // delay: 0.5,
-                                    duration: 1,
+                                    duration: .5,
                                     staggerChildren: 0.2,
                                 },
                             }}
+
+                            viewport={{ once: true }}
 
                             target='_blank'
 

@@ -16,6 +16,7 @@ const SetSkill = ({ name,imgUrl,id }) => {
       // animate={{ opacity: 1,y: 0 }}
       whileInView={{ x: 0,opacity: 1,transition: { duration: .2,delay: .3 } }}
       transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
     // borderRadius="md"
     // border="1px solid #E2E8F0"
     // boxShadow="md"
@@ -28,10 +29,18 @@ const SetSkill = ({ name,imgUrl,id }) => {
       <Card
         bg={'gray.900'}
         color={'white'}
-        shadow={'dark-lg'}
+        shadow={'2xl'}
         // border={'1px solid #E2E8F0'}
         width={'100%'}
         height={'130px'}
+        borderWidth={'1px'}
+        borderColor={'#484848'}
+
+        _hover={{
+          color: '#EC0000',
+          borderColor: '#EC0000',
+          cursor: 'pointer',
+        }}
       >
         <CardBody
           flex={1}
@@ -45,6 +54,7 @@ const SetSkill = ({ name,imgUrl,id }) => {
               objectFit='fill'
               // h={'200px'}
               w={'60px'}
+              loading='lazy'
               alt='...'
               borderRadius='lg'
             // border={'1px solid #E2E8F0'}
@@ -54,9 +64,7 @@ const SetSkill = ({ name,imgUrl,id }) => {
           <Text fontWeight={'bold'}
             // border={'1px solid #E2E8F0'} 
             textAlign={'center'}
-            _hover={{
-              color: 'red'
-            }}>{name}</Text>
+          >{name}</Text>
         </CardBody>
       </Card>
       {/* <Box mt={2}> 
@@ -79,6 +87,7 @@ export default function Skills() {
         // bg={'black'}
         // bgGradient={'linear(to-t,black,gray.900)'}
         display={['none','flex']}
+        mt={12}
       // overflow={'scroll'}
 
 
@@ -151,11 +160,14 @@ export default function Skills() {
         // border={'1px solid red'}
         pt={'2rem'}
 
+      // mt={28}
+
       >
 
         <motion.div
           initial={{ opacity: 0,x: 100 }}
           whileInView={{ x: 0,opacity: 1,transition: { duration: .2,delay: .3 } }}
+          viewport={{ once: true }}
         >
           <Text fontSize={['4xl','6xl']} fontWeight={'light'} textAlign={'center'} color='red'>
             Skills <span style={{ color: 'yellow' }}><i>({skillSet.length})</i></span>
@@ -169,6 +181,7 @@ export default function Skills() {
                 <motion.div key={index}
                   initial={{ opacity: 0,x: 100 }}
                   whileInView={{ x: 0,opacity: 1,transition: { duration: .2,delay: skill.id * .01 } }}
+                  viewport={{ once: true }}
                   style={{ overflowY: 'scroll',scrollBehavior: 'smooth',}}
                 >
                   <Badge color='white' bg='transparent' textDecoration={'none'} variant={'subtle'} w={'90vw'} mb={1} p={1} shadow={'dark-lg'} textAlign={'left'} >

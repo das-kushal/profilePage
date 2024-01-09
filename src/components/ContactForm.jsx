@@ -52,7 +52,7 @@ export default function ContactForm() {
             >
                 <motion.div
                     initial={{ opacity: 0,x: 0 }}
-                    whileInView={{ x: 0,opacity: 1,transition: { duration: .5,delay: .6 } }}
+                    whileInView={{ x: 0,opacity: 1,transition: { duration: .5,delay: .2 } }}
                     style={{
 
                         display: 'flex',
@@ -62,6 +62,8 @@ export default function ContactForm() {
                         height: '100%',
 
                     }}
+
+                    viewport={{ once: true }}
                 >
                     <Flex
                         h={'100%'}
@@ -83,7 +85,8 @@ export default function ContactForm() {
                                 type="text"
                                 name="name"
                                 placeholder='Enter your name'
-                                variant='flushed'
+                                variant='filled'
+                                bgColor={'#33383D'}
                                 mb={5}
                                 focusBorderColor='red.500'
                             />
@@ -102,7 +105,9 @@ export default function ContactForm() {
                                 type="email"
                                 name="email"
                                 placeholder='Enter your email'
-                                variant='flushed'
+                                variant='filled'
+
+                                bgColor={'#33383D'}
                                 mb={5}
                                 focusBorderColor='red.500'
 
@@ -124,7 +129,9 @@ export default function ContactForm() {
                                 fontSize={'md'}
                                 focusBorderColor='red.500'
 
-                                variant='flushed'
+                                variant='filled'
+
+                                bgColor={'#33383D'}
 
                             />
 
@@ -145,7 +152,12 @@ export default function ContactForm() {
                             // _hover={{ bg: 'red.500',color:'white', transition: '.3s all ease-in-out' }}
                             // align={'center'}
 
-                            variant={'outline'} textColor={'gray.400'} _hover={{ textColor: 'gray.700',bgColor: 'gray.100' }}
+                            variant={'outline'} textColor={'white'} borderColor={'#484848'}
+                            _hover={{
+                                // textColor: 'gray.700',
+                                // bgColor: 'gray.100',
+                                borderColor: '#F10207',
+                            }}
                         >
                             Submit
                         </Button>

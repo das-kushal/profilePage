@@ -12,6 +12,7 @@ export default function MyCard({ id,name,desc,githubLink,icon,iconLink,skills })
         <motion.div
             initial={{ opacity: 0,x: direc == 'left' ? -100 : 100 }}
             whileInView={{ x: 0,opacity: 1,transition: { duration: .5,delay: .5 } }}
+            viewport={{ once: true }}
         >
 
             <Box w={'100vw'} >
@@ -20,7 +21,7 @@ export default function MyCard({ id,name,desc,githubLink,icon,iconLink,skills })
                     overflow='hidden'
                     // variant='outline'
                     maxW={['100%','70%']}
-                    w={['','45%']}
+                    w={['','50%']}
                     p={5}
                     // mb={5}
                     minH={'40vh'}
@@ -32,11 +33,21 @@ export default function MyCard({ id,name,desc,githubLink,icon,iconLink,skills })
                     outline={'none'}
                     bg={'gray.900'}
                     color={'white'}
-                    shadow={'dark-lg'}
+                    shadow={'2xl'}
                     // border={'1px solid #E2E8F0'}
                     flex={1}
                     justifyContent={'center'}
                     alignItems={'center'}
+                    borderWidth={'1px'}
+                    borderColor={'#484848'}
+
+                    rounded={'md'}
+
+                    _hover={{
+                        // shadow: 'dark-lg',
+                        borderColor: '#EC0000',
+                        cursor: 'pointer',
+                    }}
                 >
                     {/* <Image
                         objectFit='fill'

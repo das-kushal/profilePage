@@ -70,12 +70,13 @@ export default function Contact() {
       {/* TODO: box 1  contact form */}
       <Flex
         w={['100vw','50vw']}
-        h={['70vh','50vh']}
+        h={['80vh','50vh']}
         justifyContent={'center'}
         alignItems={'center'}
         flexDirection={'column'}
         // border={'1px solid red'}
         px={[0,10]}
+        mt={[4,0]}
       >
 
 
@@ -91,14 +92,25 @@ export default function Contact() {
         >
           <motion.div
             initial={{ opacity: 0,x: 100 }}
-            whileInView={{ x: 0,opacity: 1,transition: { duration: .2,delay: .3 } }}
-          // viewport={{once:true}}
+            whileInView={{ x: 0,opacity: 1,transition: { duration: .2,delay: .2 } }}
+
+            viewport={{ once: true }}
           // onViewportLeave={{ opacity: 0, x: -100 ,transition: { duration: .5,delay:.5 } }}
           >
 
 
             <Text fontSize={['4xl','6xl']} fontWeight={'light'} textAlign={'center'} color='red'>
-              Contact Me  </Text>
+              Contact Me
+              <br />
+            </Text>
+            <Text
+              textAlign={'center'}
+              w={'100vw'}
+              // as={'span'}
+              color={'#FAD700'}
+              fontSize={["md",'lg']}
+              fontWeight={'bold'}
+            >Let&#39;s Connect</Text>
 
 
           </motion.div>
